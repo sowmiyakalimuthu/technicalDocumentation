@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=devicewidth, initial-scale=1.0" />
+ <meta name="description" content="CSS Documentation" />
+ <title>CSS Documentation</title>
+ <link rel="stylesheet" href="styles.css" />
+ </head>
+ <body>
+   <nav id="navbar">
+     <header>
+       <h1>CSS Documentation</h1>
+     </header>
+     <ul>
+       <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+       <li ><a class="nav-link" href="#Syntax">Syntax</a></li>
+       <li><a class="nav-link"  href="#Selectors">Selectors</a></li>
+       <li><a class="nav-link"  href="#Properties">Properties</a></li>
+       <li><a class="nav-link"  href="#Box_Model">Box Model</a></li>
+       <li><a class="nav-link"  href="#Layout">Layout</a></li>
+       <li><a class="nav-link"  href="#Flexbox">Flexbox</a></li>
+       <li><a class="nav-link"  href="#Grid">Grid</a></li>
+       <li><a class="nav-link" href="#Media_Queries">Media Queries</a></li>
+       <li><a class="nav-link"  href="#Animations_and_Transitions">Animations and Transitions</a></li>
+     </ul>
+   </nav>
+   <main id="main-doc">
+     <section class="main-section" id="Introduction">
+        <header>
+       <h1>Introduction</h1>
+     </header>
+     <article>
+       <p>CSS is a stylesheet language that is used to describe the presentation of a document written in HTML or XML.</p>
+     </article>
+     </section>
+      <section class="main-section" id="Syntax">
+        <header>
+       <h1>Syntax</h1>
+     </header>
+     <article>
+       <p>CSS consists of a selector and a declaration block. The selector determines which HTML elements the styles will be applied to, while the declaration block contains one or more declarations separated by semicolons.</p>
+       <code>selector {
+    property: value;
+}
+</code>
+     </article>
+     </section>
+     <section class="main-section" id="Selectors">
+        <header>
+       <h1>Selectors</h1>
+     </header>
+     <article>
+       <p>Selectors are patterns that match elements in a document. They can be based on element names, IDs, classes, attributes, or relationships between elements.</p>
+       <p>Common selectors include:</p>
+      <ul>
+        <li>Element selector (div, p, h1, etc.)</li>
+        <li>Class selector (.class-name)</li>
+        <li>ID selector (#id-name)</li>
+        <li>Attribute selector ([attribute=value])</li>
+        <li>Descendant selector (parent child)</li>
+        <li>Adjacent sibling selector (element + element)</li>
+        <li>General sibling selector (element ~ element)</li>
+      </ul>
+     </article>
+     </section>
+      <section class="main-section" id="Properties">
+        <header>
+       <h1>Properties</h1>
+     </header>
+     <article>
+       <p>CSS properties define how HTML elements are styled. Each property has a name and a value.</p>
+       <p>Common properties include:</p>
+       <ul>
+         <li>color</li>
+         <li>font-size</li>
+         <li>background-color</li>
+         <li>margin</li>
+         <li>padding</li>
+         <li>border</li>
+         <li>width</li>
+         <li>height</li>
+         <li>display</li>
+         <li>position</li>
+         <li>float</li>
+         <li>text-align</li>
+         </ul>
+     </article>
+     </section>
+      <section class="main-section" id="Box_Model">
+        <header>
+       <h1>Box Model</h1>
+     </header>
+     <article>
+       <p>The box model describes the layout of elements in CSS. It consists of the content area, padding, border, and margin.</p>
+     </article>
+     </section>
+      <section class="main-section" id="Layout">
+        <header>
+       <h1>Layout</h1>
+     </header>
+     <article>
+       <p>CSS layout refers to the arrangement of elements on a web page. It can be achieved using various techniques such as floats, positioning, and flexbox.</p>
+     </article>
+     </section>
+     <section class="main-section" id="Flexbox">
+        <header>
+       <h1>Flexbox</h1>
+     </header>
+     <article>
+       <p>Flexbox is a layout model that allows elements to be aligned and distributed within a container. It provides a more efficient way to layout, align, and distribute space among items in a container.</p>
+       <code>.flex-container {
+    display: flex;
+    flex-direction: row; /* or column */
+    justify-content: space-between; /* or space-around, space-evenly, flex-start, flex-end, center */
+    align-items: center; /* or flex-start, flex-end, stretch, baseline */
+}
+
+.flex-item {
+    flex: 1; /* or any other flex value */
+    /* Other styling for flex items */
+}</code>
+     </article>
+     </section>
+     <section class="main-section" id="Grid">
+        <header>
+       <h1>Grid</h1>
+     </header>
+     <article>
+       <p>CSS Grid Layout is a two-dimensional layout system that allows you to create complex grid-based layouts with rows and columns. It provides a powerful and flexible way to design responsive layouts.</p>
+       <code>.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns with equal width */
+    grid-gap: 20px; /* Gap between grid items */
+}
+
+.grid-item {
+    /* Styling for grid items */
+}</code>
+     </article>
+     </section>
+     <section class="main-section" id="Media_Queries">
+        <header>
+       <h1>Media Queries</h1>
+     </header>
+     <article>
+       <p>Media queries allow you to apply different styles based on the characteristics of the device or viewport, such as screen size, resolution, or orientation. They are commonly used for creating responsive designs that adapt to different devices and screen sizes.</p>
+       <code>
+         @media screen and (max-width: 768px) {
+    /* Styles for screens smaller than 768px */
+}
+
+       </code>
+     </article>
+     </section>
+      <section class="main-section" id="Animations_and_Transitions">
+        <header>
+       <h1>Animations and Transitions</h1>
+     </header>
+     <article>
+       <p>CSS animations and transitions allow you to animate the properties of an element over time. Animations provide more control and flexibility, while transitions are simpler and easier to use for basic effects.</p>
+       <code>/* Animations */
+@keyframes slide-in {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.element {
+    animation: slide-in 1s ease-out;
+}
+
+/* Transitions */
+.transition-example {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    transition: width 0.5s ease-out;
+}
+
+.transition-example:hover {
+    width: 200px;
+}
+</code>
+     </article>
+     </section>
+   </main>
+    </body>
+    </html>
+
+
+
+
+
+
+
